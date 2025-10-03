@@ -100,10 +100,6 @@ MIT License – feel free to use, adapt, and improve.
 
 ---
 
-You’re right 👍 — `pyzotero` uses the **Blue Oak Model License 1.0.0**, which is a modern, permissive license (similar in spirit to MIT/Apache). That means you can freely use it, modify it, and redistribute your code, as long as you don’t hold the authors liable. No problems there.
-
----
-
 ## Disclaimer
 
 This project is an **unofficial tool** for managing Zotero libraries. It is not affiliated with or endorsed by Zotero or the Corporation for Digital Scholarship.

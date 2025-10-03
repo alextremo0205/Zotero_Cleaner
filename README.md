@@ -1,6 +1,6 @@
-# Zotero Cleaner Notebook
+# Zotero Cleaner
 
-This repository contains a **Jupyter Notebook** that helps clean and migrate **PDF attachments** from Zotero’s local storage to an external folder (e.g., OneDrive, Dropbox, Google Drive).
+This repository contains a **Python file** and a **Jupyter Notebook** that help clean and migrate **PDF attachments** from Zotero’s local storage to an external folder (e.g., OneDrive, Dropbox, Google Drive).
 The notebook also updates your Zotero library: imported file attachments are replaced with **linked file attachments** pointing to the new location.
 
 This workflow is especially useful if you want to:
@@ -36,17 +36,17 @@ This workflow is especially useful if you want to:
 
 ## Configuration
 
-Create a `.env` file in the repository root with the following variables:
+**Create** a `.env` file in the repository root with the following variables:
 
 ```ini
-LIBRARY_ID=your_zotero_library_id   # Zotero user or group ID
-LIBRARY_TYPE=user                   # or "group"
-ZOTERO_KEY=your_zotero_api_key      # Zotero API key
-ZOTERO_STORAGE_PATH=/path/to/zotero/storage
-DEST_FOLDER=/path/to/export/folder
+LIBRARY_ID           = your_zotero_library_id   # Zotero user or group ID (e.g, 09143178235)
+LIBRARY_TYPE         = user                     # or "group"
+ZOTERO_KEY           = your_zotero_api_key      # Zotero API key
+ZOTERO_STORAGE_PATH  = '/path/to/zotero/storage'
+DEST_FOLDER          = '/path/to/export/folder'
 ```
 
-💡 *You can find your Zotero API key under: `Zotero.org → Settings → Feeds/API → Create new private key`*
+💡 *You can find your Zotero API key under: `Zotero.org → click on user → Settings → Security → Create new private key`*
 
 ---
 
@@ -67,7 +67,9 @@ DEST_FOLDER=/path/to/export/folder
    jupyter notebook
    ```
 
-4. Open the notebook (`zotero_cleaner.ipynb`) and run the cells step by step:
+4a. Run the Python script (`Zotero_Cleaner.py`) or
+
+4b. Open the notebook (`Zotero_Cleaner.ipynb`) and run the cells step by step:
 
    * **Load configuration** (reads `.env`)
    * **Fetch Zotero items**
